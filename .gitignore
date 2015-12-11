@@ -23,8 +23,8 @@ hs_err_pid*
 /doc/		
 /test-output
 /test-output/**/*
-/.classpath		
-/.project		
+.classpath		
+.project		
 /.checkstyle		
 		
 # ignore doc/notes.txt, but not doc/info/arch.txt		
