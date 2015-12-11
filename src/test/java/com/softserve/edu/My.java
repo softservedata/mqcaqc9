@@ -7,7 +7,7 @@ public class My {
 	
 	@Test
 	public void notest() {
-		System.out.println("class My, notest()");
+		System.out.println("***class My, notest()");
 		Assert.assertTrue(true);
 	}
 
