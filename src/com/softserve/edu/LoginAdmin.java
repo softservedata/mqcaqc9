@@ -30,6 +30,7 @@ public class LoginAdmin {
 		driver.findElement(By.xpath("//a[@class='spec']")).click();
 		//Thread.sleep(1000);
 		driver.quit();
-		Assert.assertEquals(s, "horoshko");
+		Assert.assertEquals(s, "ivanka");
+		System.out.println("DONE");
 	}
 }
