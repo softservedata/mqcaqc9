@@ -63,7 +63,7 @@ public class LoginTest {
 		};
 	}
 
-	@Test(dataProvider = "adminUsers")
+	//@Test(dataProvider = "adminUsers")
 	public void checkAdminLogin(IUser adminUser) throws InterruptedException {
 		// Test Operation
 		AdminHomePage adminHomePage = LoginStartPage.loadOne()
