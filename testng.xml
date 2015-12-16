@@ -4,7 +4,8 @@
 	<parameter name="testurl" value="http://ssu-oms:8180/OMS/login.htm" />
 	<test name="Test1">
 		<classes>
-			<class name="com.softserve.edu.oms.tests.LoginTest"/>
+			<!-- <class name="com.softserve.edu.oms.tests.LoginTest" />  -->
+			<class name="com.softserve.edu.AppTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
