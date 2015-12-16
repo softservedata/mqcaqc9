@@ -16,12 +16,15 @@ hs_err_pid*
 /bin/		
 		
 /.externalToolBuilders/		
-/.settings/		
-/target/		
+/.settings		
+/.settings/**/*
+/target		
+/target/**/*
 /doc/		
-/test-output/		
-/.classpath		
-/.project		
+/test-output
+/test-output/**/*
+.classpath		
+.project		
 /.checkstyle		
 		
 # ignore doc/notes.txt, but not doc/info/arch.txt		
