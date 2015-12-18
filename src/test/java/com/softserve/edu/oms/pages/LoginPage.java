@@ -3,8 +3,10 @@ package com.softserve.edu.oms.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 import com.softserve.edu.oms.data.IUser;
+import com.softserve.edu.oms.data.ReporterWrapper.ReporterLevels;
 
 public class LoginPage {
 	private WebDriver driver;
@@ -19,6 +21,9 @@ public class LoginPage {
 		this.login = driver.findElement(By.name("j_username"));
 		this.password = driver.findElement(By.name("j_password"));
 		this.submit = driver.findElement(By.name("submit"));
+		//
+		Reporter.log("<br>[INFO] <p>LoginPage CREATED</p>",
+				ReporterLevels.INFO_LEVEL.getLevel(), true);
 	}
 
 	// Get Elements

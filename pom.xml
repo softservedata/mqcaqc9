@@ -13,7 +13,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.testng.version>6.9.9</org.testng.version>
+		<org.testng.version>6.9.10</org.testng.version>
 		<org.mockito.version>1.9.5</org.mockito.version>
 		<org.seleniumhq.version>2.48.2</org.seleniumhq.version>
 		<org.slf4j.version>1.7.13</org.slf4j.version>
@@ -116,6 +116,11 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19</version>
 				<configuration>
+					<systemPropertyVariables>
+						<surefire.reports.directory>
+							${testng.reports.directory}
+						</surefire.reports.directory>
+					</systemPropertyVariables>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>

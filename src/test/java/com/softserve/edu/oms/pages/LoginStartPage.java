@@ -48,6 +48,10 @@ public class LoginStartPage {
 		}
 	}
 
+	public static WebDriver getWebDriver() {
+		return get().driverList.get(0);
+	}
+	
 	public LoginPage logout(){
 		driverList.get(0).get("http://ssu-oms:8180/OMS/logout.htm");
 		return new LoginPage(driverList.get(0));
