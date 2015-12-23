@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.softserve.edu.oms.data.IUser;
+import com.softserve.edu.oms.data.ListUtils;
 import com.softserve.edu.oms.data.ReporterWrapper;
 import com.softserve.edu.oms.data.ReporterWrapper.ReporterLevels;
 import com.softserve.edu.oms.data.UserRepository;
@@ -75,7 +76,7 @@ public class LoginTest {
 		return new Object[][] { { UserRepository.getInvalid() }, };
 	}
 
-	@Test(dataProvider = "invalidUsers")
+	//@Test(dataProvider = "invalidUsers")
 	public void checkInvalidLogin(IUser invalidUser)
 			throws InterruptedException {
 		logger.info("@Test - checkInvalidLogin() start");
@@ -103,7 +104,19 @@ public class LoginTest {
 		return new Object[][] { { UserRepository.getAdmin() }, };
 	}
 
-	@Test(dataProvider = "adminUsers")
+	@DataProvider
+	public Object[][] allAdminUsersCSV() {
+		return (new ListUtils()).toMultiArray(UserRepository.getAdminCSV());
+	}
+
+	@DataProvider
+	public Object[][] allAdminUsersExcel() {
+		return (new ListUtils()).toMultiArray(UserRepository.getAdminExcel());
+	}
+
+	//@Test(dataProvider = "adminUsers")
+	//@Test(dataProvider = "allAdminUsersCSV")
+	@Test(dataProvider = "allAdminUsersExcel")
 	public void checkAdminLogin(IUser adminUser) throws InterruptedException {
 		logger.info("@Test - checkAdminLogin() start");
 		Reporter.log("<br><p>@Test - checkAdminLogin() start</p>",
@@ -111,8 +124,9 @@ public class LoginTest {
 		// Test Operation
 		AdminHomePage adminHomePage = LoginStartPage.loadOne()
 				.successAdminLogin(adminUser);
-		int i = 1 / 0;
-		System.out.println(i);
+		//int i = 1 / 0;
+		//System.out.println(i);
+		//
 		// Check
 		// Assert.assertEquals(adminHomePage.getFirstnameText(),
 		// adminUser.getFirstname());
@@ -140,7 +154,7 @@ public class LoginTest {
 		return new Object[][] { { UserRepository.getCustomer() }, };
 	}
 
-	@Test(dataProvider = "customerUsers")
+	//@Test(dataProvider = "customerUsers")
 	public void checkCustomerLogin(IUser customerUser)
 			throws InterruptedException {
 		logger.info("@Test - checkCustomerLogin() start");

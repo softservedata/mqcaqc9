@@ -1,9 +1,0 @@
-10:55:27,703 ERROR main Appl:appMethod:24 - Appl Error
-10:55:27,705  WARN main Appl:appMethod:25 - Appl Warning
-10:55:27,705 ERROR main Calc:calcMethod:10 - Calc Error
-10:55:27,705  WARN main Calc:calcMethod:11 - Calc Warning
-10:55:27,706  INFO main Calc:calcMethod:12 - Calc Info
-10:55:27,706 ERROR main Some:someMethod:10 - Some Error
-10:55:27,707  WARN main Some:someMethod:11 - Some Warning
-10:55:27,707  INFO main Some:someMethod:12 - Some Info
-10:55:27,708 DEBUG main Some:someMethod:13 - Some Debug

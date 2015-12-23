@@ -1,5 +1,7 @@
 package com.softserve.edu.oms.data;
 
+import java.util.List;
+
 public final class UserRepository {
 
 	private UserRepository() {
@@ -71,6 +73,14 @@ public final class UserRepository {
 				.setPassword("dd")
 				.setEmail("dddd@gmail.com")
 				.build();
+	}
+
+	public static List<IUser> getAdminCSV() {
+		return new UsersUtils().getAllUsersCSV();
+	}
+	
+	public static List<IUser> getAdminExcel() {
+		return new UsersUtils().getAllUsersExcel();
 	}
 
 }

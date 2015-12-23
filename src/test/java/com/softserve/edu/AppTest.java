@@ -18,8 +18,9 @@ public class AppTest {
 		//System.out.println("class AppTest, testApp()");
 		logger.info("class AppTest, testApp()");
 		Reporter.log("<br><p>class AppTest, testApp()</p>");
-		System.out.println("*****Path = " + AppTest.class
-				.getResource("").getPath().substring(1));
+		//System.out.println("*****Path = " + AppTest.class
+		System.out.println("*****Path = " + this.getClass()
+				.getResource("/user.csv").getPath().substring(1));
 //		for (List<String> list : (new CSVUtils()).getAllCells(AppTest.class
 //				.getResource("user.csv").getPath().substring(1)) ) {
 //			System.out.println(list);
